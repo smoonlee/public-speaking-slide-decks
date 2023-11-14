@@ -1,10 +1,8 @@
 
 # Getting Starting with Azure Blogging
 
-## Post Overview
 This post will cover the following topics:
 - [Getting Starting with Azure Blogging](#getting-starting-with-azure-blogging)
-  - [Post Overview](#post-overview)
     - [Introduction - Installing GoHugo Framework](#introduction---installing-gohugo-framework)
     - [For Windows](#for-windows)
     - [For Linux](#for-linux)
@@ -238,6 +236,8 @@ And finally, we can check the static web app using the custom domain.
 ![Alt text](./content/swa-custom-domain.png)
 
 # Conclusion
-So, there we have it. A Static Web App, with a custom domain, using Hugo as the framework and GitHub as the source control. Ovbiously this is a very basic example of how to get started with blogging, but I hope this has been useful.
+In conclusion, we've successfully set up a Static Web App complete with a personalized domain, leveraging the power of Hugo as our framework and GitHub for seamless source control. While this tutorial provided a foundational understanding of starting a blog, there's a vast landscape of possibilities awaiting exploration.
 
-There is a lot more we can do with Hugo, such as adding comments, Google Analytics, Content tagging and customising the theme. But I will leave that for another day.
+This is just the tip of the iceberg with Hugo; there's so much more we can delve into, including incorporating features like comments, integrating Google Analytics for insightful data, mastering content tagging, and even giving your site a unique flair by customizing the theme. The journey of building your blog is an ongoing adventure, and I'm confident this guide has equipped you with the essentials to embark on it.
+
+Remember, every step you take in expanding your site's functionalities adds depth and character to your online presence. So, stay curious, keep experimenting, and let your creativity flow. Until next time, happy blogging!
