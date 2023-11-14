@@ -226,3 +226,6 @@ then add the url prefix `demo-web-app` - this will add the subdomain to the DNS 
 
 ![Alt text](./content/azure-swa-add-custom-domain.png)
 
+Next we need to change the default domain to be the custom domain. This can be done from the Configuration tab, under the Domain section. 
+
+![Alt text](./content/azure-swa-domain-overview.png)
