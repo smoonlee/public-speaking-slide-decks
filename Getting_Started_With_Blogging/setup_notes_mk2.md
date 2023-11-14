@@ -105,7 +105,7 @@ title = 'My New Hugo Site'
 An updated hugo.toml file would look like
 
 ```toml
-baseURL = 'https://example.org/'
+baseURL = 'https://demo-web-app.builtwithcaffeine.cloud'
 languageCode = 'en-us'
 title = 'Static Web App Demo Site'
 theme = "bilberry-hugo-theme/v4"
@@ -157,3 +157,41 @@ hugo new posts/2023-11/welcome-to-my-blog.md
 
 This will create a new post in the posts folder, with the date and title of the post.
 ![Alt text](./content/hugo-content-post-new.png)
+
+## Pre-Azure step - commit to GitHub
+
+Ok! So we have the sample site ready to use, now we need to commit the changes to GitHub. Ensure that the hugo site is not running locally `CTRL + C` and then we can commit the changes to GitHub.
+
+```
+git add * && git commit -m "Static Web App Upload" && git push
+```
+![Alt text](./content/git-commit-swa.png)
+
+
+## Creating the Azure Static Web App
+Now that we have a Hugo site, we can now create the Azure Static Web App.
+From the Azure portal, we need to create a resource group which will contain the Static Web App and later on the DNS Zone for the website.
+
+![Alt text](./content/azure-create-swa-part-1.png)
+
+This is the important part, If you get these settings wrong the site wont deploy.
+For this example we are going to use GitHub as the source control, and the repository we created earlier in this guide. and the Build Preset will be Hugo. 
+
+![Alt text](./content/azure-create-swa-part-2.png)
+
+Pre-Flight checks, before the static web app is deployed to Azure.
+
+![Alt text](./content/azure-swa-pre-flight.png)
+
+As we can see here the deployment of the Static Web App is super fast and has only taken a couple of miuntes to complete.
+
+![Alt text](./content/azure-swa-flight-complete.png)
+
+Once the Static Web App has been created it pushed a yaml file to the GitHub repository which contains the build and deployment instructions for the site.
+You can view this under the GitHub Action tab within the repository.
+
+![Alt text](./content/github-menu.png)
+
+From here we can see the intial action has completed and the site has been deployed.
+![Alt text](./content/github-action-overview.png)
+
