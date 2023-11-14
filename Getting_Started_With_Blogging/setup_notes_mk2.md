@@ -2,19 +2,24 @@
 # Getting Starting with Azure Blogging
 
 ## Post Overview
- -> [Introduction](#introduction) \
-    -> [Create a GitHub Repository](#create-a-github-repository) \
-    -> [Installing GoHugo Framework](#installing-gohugo-framework) \
-    -> [Customising the Hugo with a Theme](#customising-the-hugo-with-a-theme) \
-    -> [Content Creation Time!](#content-creation-time) \
-    -> [Creating a new post](#creating-a-new-post) \
-    -> [Pre-Azure step - commit to GitHub](#pre-azure-step---commit-to-github) \
-    -> [Creating the Azure Static Web App](#creating-the-azure-static-web-app) \
-    -> [Post Deployment](#post-deployment) \
-    -> [Conclusion](#conclusion)
+This post will cover the following topics:
+- [Getting Starting with Azure Blogging](#getting-starting-with-azure-blogging)
+  - [Post Overview](#post-overview)
+    - [Introduction - Installing GoHugo Framework](#introduction---installing-gohugo-framework)
+    - [For Windows](#for-windows)
+    - [For Linux](#for-linux)
+  - [Create a GitHub Repository](#create-a-github-repository)
+    - [Initialise Hugo Framework](#initialise-hugo-framework)
+    - [Customising the Hugo with a Theme.](#customising-the-hugo-with-a-theme)
+    - [Content Creation Time!](#content-creation-time)
+    - [Creating a new post](#creating-a-new-post)
+  - [Pre-Azure step - commit to GitHub](#pre-azure-step---commit-to-github)
+  - [Creating the Azure Static Web App](#creating-the-azure-static-web-app)
+  - [Adding a Custom Domain to the Static Web App](#adding-a-custom-domain-to-the-static-web-app)
+- [Conclusion](#conclusion)
 
 > [!WARNING]
-> This guide assumes the Git is already installed locally.
+> This guide assumes that Git and VSCode is already installed locally.
 
 ### Introduction - Installing GoHugo Framework
 Firstly we need to ensure that the Hugo Framwork is installed on your local machine. This is a static site generator that will allow us to create a blog site that can be hosted on Azure. to do this we can use the following command:
@@ -227,3 +232,12 @@ then add the url prefix `demo-web-app` - this will add the subdomain to the DNS 
 Next we need to change the default domain to be the custom domain. This can be done from the Configuration tab, under the Domain section. 
 
 ![Alt text](./content/azure-swa-domain-overview.png)
+
+And finally, we can check the static web app using the custom domain.
+
+![Alt text](./content/swa-custom-domain.png)
+
+# Conclusion
+So, there we have it. A Static Web App, with a custom domain, using Hugo as the framework and GitHub as the source control. Ovbiously this is a very basic example of how to get started with blogging, but I hope this has been useful.
+
+There is a lot more we can do with Hugo, such as adding comments, Google Analytics, Content tagging and customising the theme. But I will leave that for another day.
