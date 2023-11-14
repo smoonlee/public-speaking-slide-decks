@@ -209,3 +209,20 @@ You can view this under the GitHub Action tab within the repository.
 From here we can see the intial action has completed and the site has been deployed.
 ![Alt text](./content/github-action-overview.png)
 
+## Adding a Custom Domain to the Static Web App
+
+> [!WARNING]
+> Just as a general heads up, If the Static Web App has been deployed with a customer domain, the site initally will look broken as the url links will use the custom domain. - Which will not YET be configured.
+
+For this example we already have a DNS Zone in Azure which we can use to add the custom domain to the Static Web App. for this example the DNS zone is: `cloudadventures.org`
+
+The Website URL we configured in the hugo.toml file is: `https://demo-web-app.cloudadventures.org`
+
+to configure a customer domain, from the Static Web App resource, select the Custom Domains tab and then click on the Add Custom Domain button then Custom domain on Azure DNS.
+
+![Alt text](./content/azure-swa-custom-domain.png)
+
+then add the url prefix `demo-web-app` - this will add the subdomain to the DNS Zone and configure the CNAME record for the Static Web App. - All in one go!
+
+![Alt text](./content/azure-swa-add-custom-domain.png)
+
