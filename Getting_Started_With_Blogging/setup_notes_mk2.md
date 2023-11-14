@@ -152,3 +152,8 @@ To create a new post we can use the following command:
 ```
 hugo new posts/2023-11/welcome-to-my-blog.md
 ```
+
+![Alt text](./content/hugo-create-new-post.png)
+
+This will create a new post in the posts folder, with the date and title of the post.
+![Alt text](./content/hugo-content-post-new.png)
