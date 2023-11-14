@@ -1,6 +1,18 @@
 
 # Getting Starting with Azure Blogging
 
+## Post Overview
+ -> [Introduction](#introduction) \
+    -> [Create a GitHub Repository](#create-a-github-repository) \
+    -> [Installing GoHugo Framework](#installing-gohugo-framework) \
+    -> [Customising the Hugo with a Theme](#customising-the-hugo-with-a-theme) \
+    -> [Content Creation Time!](#content-creation-time) \
+    -> [Creating a new post](#creating-a-new-post) \
+    -> [Pre-Azure step - commit to GitHub](#pre-azure-step---commit-to-github) \
+    -> [Creating the Azure Static Web App](#creating-the-azure-static-web-app) \
+    -> [Post Deployment](#post-deployment) \
+    -> [Conclusion](#conclusion)
+
 > [!WARNING]
 > This guide assumes the Git is already installed locally.
 
@@ -103,9 +115,11 @@ title = 'My New Hugo Site'
 ```
 
 An updated hugo.toml file would look like
-
+ 
 ```toml
-baseURL = 'https://demo-web-app.builtwithcaffeine.cloud'
+> 
+```toml
+baseURL = 'https://demo-web-app.cloudadventures.org'
 languageCode = 'en-us'
 title = 'Static Web App Demo Site'
 theme = "bilberry-hugo-theme/v4"
