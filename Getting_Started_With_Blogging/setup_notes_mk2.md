@@ -41,3 +41,79 @@ git clone https://github.com/builtwithcaffeine/static-web-app-demo.git
 
 ### Initialise Hugo Framework  
 [Hugo :: Quick Start Help](https://gohugo.io/getting-started/quick-start/)
+
+> From the working directory C:\Code 
+
+```
+hugo new site static-web-app-demo -d .\static-web-app-demo --force
+```
+
+Example of new site creation.
+![Alt text](./content/hugo-inital-deploy.png)
+
+So, we technically have a site deployed, However if you were to look at it from your local machine it would'nt look very nice. First we need to change the local directory to be inside the hugo site. 
+
+```
+Set-location -Path 'C:\Code\static-web-app-demo'
+```
+
+Then Launch the Hugo Server
+```
+hugo server
+``````
+
+![Alt text](./content/hugo-local-server-fresh.png)
+
+Open a web browser and nativate to [http://localhost:1313](http://localhost:1313)
+
+As I said, It's not very pretty. So lets add a theme to the site.
+
+![Alt text](./content/hugo-my-first-site.png)
+
+### Customising the Hugo with a Theme.
+[Hugo :: Themes](https://themes.gohugo.io/)
+
+For this example I'm going to demonstrate how to use the [bilberry-hugo-theme](https://themes.gohugo.io/themes/bilberry-hugo-theme/) theme. 
+
+First we need to stop the local Hugo Server instance. `CTRL + C` \
+From the Bilberry Git Repo, We are gonig to use Install Method #2 `Git SubModule` 
+
+Ensure that you are in the correct working directory, This should be: 
+
+```
+Set-Location -Path 'C:\Code\static-web-app-demo
+```
+
+Now we can clone the theme into the Static Web App folder.
+```
+git submodule add https://github.com/Lednerb/bilberry-hugo-theme.git themes/bilberry-hugo-theme
+```
+
+![Alt text](./content/git-bilberry-theme-clone.png)
+
+Once the theme has been downloaded we need to update the hugo.toml file to use the new theme. 
+
+A default hugo.toml file would look like
+
+```toml
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+```
+
+An updated hugo.toml file would look like
+
+```toml
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Static Web App Demo Site'
+theme = "bilberry-hugo-theme/v4"
+```
+
+Now lets check the site again 
+
+```
+hugo server
+```
+
+![Alt text](./content/hugo-local-server-themed.png)
