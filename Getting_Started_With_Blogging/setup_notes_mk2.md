@@ -23,7 +23,7 @@ Once we have installed Hugo, next we need to create a GitHub Repository to store
 ![Alt text](./content/github-create-new-repo.png)
 
 Once the repository has been created we can then clone the new repo to the local machine.
-
+![Alt text](image.png)
 ![Alt text](./content/github-repo-http-address.png)
 
 > For this example the working directory will be C:\Code \
