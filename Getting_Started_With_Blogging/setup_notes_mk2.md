@@ -76,7 +76,7 @@ As I said, It's not very pretty. So lets add a theme to the site.
 For this example I'm going to demonstrate how to use the [bilberry-hugo-theme](https://themes.gohugo.io/themes/bilberry-hugo-theme/) theme. 
 
 First we need to stop the local Hugo Server instance. `CTRL + C` \
-From the Bilberry Git Repo, We are gonig to use Install Method #2 `Git SubModule` 
+From the Bilberry Git Repo, We are going to use Install Method #2 `Git SubModule` 
 
 Ensure that you are in the correct working directory, This should be: 
 
@@ -117,3 +117,7 @@ hugo server
 ```
 
 ![Alt text](./content/hugo-local-server-themed.png)
+
+Open a web browser and nativate to [http://localhost:1313](http://localhost:1313)
+
+![Alt text](./content/hugo-bilberry-theme-fresh.png)
