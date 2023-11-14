@@ -117,8 +117,6 @@ title = 'My New Hugo Site'
 An updated hugo.toml file would look like
  
 ```toml
-> 
-```toml
 baseURL = 'https://demo-web-app.cloudadventures.org'
 languageCode = 'en-us'
 title = 'Static Web App Demo Site'
