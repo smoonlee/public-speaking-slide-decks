@@ -71,7 +71,8 @@ As I said, It's not very pretty. So lets add a theme to the site.
 ![Alt text](./content/hugo-my-first-site.png)
 
 ### Customising the Hugo with a Theme.
-[Hugo :: Themes](https://themes.gohugo.io/)
+[Hugo :: Themes](https://themes.gohugo.io/) \
+[Bilberry Theme :: GitHub](https://github.com/Lednerb/bilberry-hugo-theme) 
 
 For this example I'm going to demonstrate how to use the [bilberry-hugo-theme](https://themes.gohugo.io/themes/bilberry-hugo-theme/) theme. 
 
@@ -121,3 +122,33 @@ hugo server
 Open a web browser and nativate to [http://localhost:1313](http://localhost:1313)
 
 ![Alt text](./content/hugo-bilberry-theme-fresh.png)
+
+### Content Creation Time! 
+So hugo has two options for content creation. Either Pages or Posts.
+There is some really good documentation provided from Hugo on Content creation and organisation, which can be found here > [Click Me!](https://gohugo.io/content-management/organization/)
+
+```
+.
+└── content
+    └── about
+    |   └── index.md  // <- https://example.org/about/
+    ├── posts
+    |   ├── firstpost.md   // <- https://example.org/posts/firstpost/
+    |   ├── happy
+    |   |   └── ness.md  // <- https://example.org/posts/happy/ness/
+    |   └── secondpost.md  // <- https://example.org/posts/secondpost/
+    └── quote
+        ├── first.md       // <- https://example.org/quote/first/
+        └── second.md      // <- https://example.org/quote/second/
+```
+^ this snippet has been taken direct from the Hugo Website, Just for reference.
+
+So from a VSCode perspective, this is how I personally like to organise my content. 
+
+![Alt text](./content/vscode-cotent-overview.png)
+
+### Creating a new post
+To create a new post we can use the following command:
+```
+hugo new posts/2023-11/welcome-to-my-blog.md
+```
