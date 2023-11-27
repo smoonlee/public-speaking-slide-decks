@@ -4,8 +4,6 @@
 This post will cover the following topics:
 - [Getting Starting with Azure Blogging](#getting-starting-with-azure-blogging)
     - [Introduction - Installing GoHugo Framework](#introduction---installing-gohugo-framework)
-    - [For Windows](#for-windows)
-    - [For Linux](#for-linux)
   - [Create a GitHub Repository](#create-a-github-repository)
     - [Initialise Hugo Framework](#initialise-hugo-framework)
     - [Customising the Hugo with a Theme.](#customising-the-hugo-with-a-theme)
@@ -19,18 +17,40 @@ This post will cover the following topics:
 > [!WARNING]
 > This guide assumes that Git and VSCode is already installed locally.
 
+> [!NOTE]
+> Software Package Versions from time of post: \
+> <br>
+> winget: 1.6.3133 \
+> Windows Terminal: 1.18.2822.0 \
+> PowerShell: 7.4.0 \
+> VS Code: 1.84.2
+
+Manual Installation of Visual Studio Code and Git. 
+```
+$AppList = @('Git.Git','Microsoft.VisualStudioCode')
+ForEach ($App in $AppList) {
+winget install --scope machine --exact $App
+}
+```
+
+Manual Installation of Visual Studio Code and Git and PowerShell 7
+```
+$AppList = @('Git.Git','Microsoft.VisualStudioCode','Microsoft.PowerShell')
+ForEach ($App in $AppList) {
+winget install --scope machine --exact $App
+}
+```
+
+> [!IMPORTANT]
+> Once the packages have been installed, you will need to restart the terminal session for the changes to take effect.
+
 ### Introduction - Installing GoHugo Framework
 Firstly we need to ensure that the Hugo Framwork is installed on your local machine. This is a static site generator that will allow us to create a blog site that can be hosted on Azure. to do this we can use the following command:
 
-### For Windows
 ```
-winget install -e Hugo.Hugo.Extended
+winget install --exact Hugo.Hugo.Extended
 ```
 
-### For Linux 
-```
-sudo apt install hugo
-```
 
 Once we have installed Hugo, next we need to create a GitHub Repository to store our Hugo site. We will be using this repository to deploy our site to Azure Static Web Apps.  So to [Github](https://github.com)!
 
@@ -60,7 +80,7 @@ git clone https://github.com/builtwithcaffeine/static-web-app-demo.git
 > From the working directory C:\Code 
 
 ```
-hugo new site static-web-app-demo -d .\static-web-app-demo --force
+hugo new site c:\code\static-web-app-demo --force
 ```
 
 Example of new site creation.
@@ -213,7 +233,7 @@ From here we can see the intial action has completed and the site has been deplo
 ## Adding a Custom Domain to the Static Web App
 
 > [!WARNING]
-> Just as a general heads up, If the Static Web App has been deployed with a customer domain, the site initally will look broken as the url links will use the custom domain. - Which will not YET be configured.
+> Just as a general heads up, If the Static Web App has been deployed with a customer domain, the site initially will look broken as the url links will use the custom domain. - Which will not YET be configured.
 
 For this example we already have a DNS Zone in Azure which we can use to add the custom domain to the Static Web App. for this example the DNS zone is: `cloudadventures.org`
 
