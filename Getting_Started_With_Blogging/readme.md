@@ -10,6 +10,7 @@ This post will cover the following topics:
     - [Content Creation Time!](#content-creation-time)
     - [Creating a new post](#creating-a-new-post)
   - [Pre-Azure step - commit to GitHub](#pre-azure-step---commit-to-github)
+  - [Creating Resource Group](#creating-resource-group)
   - [Creating the Azure Static Web App](#creating-the-azure-static-web-app)
   - [Adding a Custom Domain to the Static Web App](#adding-a-custom-domain-to-the-static-web-app)
 - [Conclusion](#conclusion)
@@ -20,10 +21,10 @@ This post will cover the following topics:
 > [!NOTE]
 > Software Package Versions from time of post: \
 > <br>
-> winget: 1.6.3133 \
-> Windows Terminal: 1.18.2822.0 \
-> PowerShell: 7.4.0 \
-> VS Code: 1.84.2
+> winget: v1.8.1911 \
+> Windows Terminal: 1.21.2361.0 \
+> PowerShell: 7.4.5 \
+> VS Code: 1.93.0
 
 Manual Installation of Visual Studio Code and Git.
 
@@ -222,6 +223,12 @@ git add * && git commit -m "Static Web App Upload" && git push
 ```
 
 ![Alt text](./content/git-commit-swa.png)
+
+## Creating Resource Group
+
+From the Azure Portal, create a new resource group
+
+![alt text](./content/azure-create-resource-group.png)
 
 ## Creating the Azure Static Web App
 
