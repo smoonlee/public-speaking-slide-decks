@@ -1,0 +1,1 @@
+# The Lazy Ops Guide to Cert Management
